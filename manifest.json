@@ -1,0 +1,34 @@
+{
+  "name": "Netflix",
+  "description": "Web Netflix",
+  "version": "0.2",
+  "minimum_chrome_version": "30",
+  "author": [
+    {
+      "name": "Gustavo Guarda",
+      "email": "gustavoguarda@gmail.com"
+    }
+  ],
+  "app": {
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    }
+  },
+  "icons": { "16": "netflix-16.png", "128": "netflix-128.png" },
+  "permissions": [
+    "webview",
+    "audioCapture",
+    "videoCapture",
+    "storage",
+    "fullscreen"
+  ],
+  "webview": {
+    "partitions": [
+      {
+        "name": "netflix",
+        "accessible_resources": [""]
+      }
+    ]
+  }
+}
